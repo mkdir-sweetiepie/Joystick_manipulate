@@ -53,8 +53,31 @@ void Joy_cmd_vel_mani::operate()
 // 조이스틱 메시지에서 각속도 목표값을 읽어와 변수에 저장함.
 void Joy_cmd_vel_mani::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
-  target_angular1 = joy->axes[4];  //조이스틱에서 오른쪽 방향키 위아래
+  /*float형식*/
+  //_______ = joy->axes[0];  //조이스틱에서 왼쪽 방향키 왼쪽 오른쪽
   target_angular2 = joy->axes[1];  //조이스틱에서 왼쪽 방향키 위아래
+  //_______ = joy->axes[2];  //조이스틱에서 L2
+  //_______ = joy->axes[3];  //조이스틱에서 오른쪽 방향키 왼쪽 오른쪽
+  target_angular1 = joy->axes[4];  //조이스틱에서 오른쪽 방향키 위아래
+  //_______ = joy->axes[5];  //조이스틱에서 R2
+  //_______ = joy->axes[6];  //조이스틱에서 왼쪽 방향키 왼쪽 오른쪽
+  //_______ = joy->axes[7];  /조이스틱에서 왼쪽 방향키 위아래
+
+  /*int 형식*/
+  //_______ = joy->buttons[0];  //조이스틱에서 오른쪽 X표시 버튼
+  //_______ = joy->buttons[1];  //조이스틱에서 오른쪽 O표시 버튼
+  //_______ = joy->buttons[2];  //조이스틱에서 오른쪽 삼각형표시 버튼
+  //_______ = joy->buttons[3];  //조이스틱에서 오른쪽 사각형표시 버튼
+  //_______ = joy->buttons[4];  //조이스틱에서 L1
+  //_______ = joy->buttons[5];  //조이스틱에서 R1
+  //_______ = joy->buttons[6];  //조이스틱에서 L2
+  //_______ = joy->buttons[7];  //조이스틱에서 R2
+  //_______ = joy->buttons[8];  //조이스틱에서 share
+  //_______ = joy->buttons[9];  //조이스틱에서 options
+  //_______ = joy->buttons[10];  //조이스틱에서 가운데 버튼
+  //_______ = joy->buttons[11];  //조이스틱에서 왼쪽 스틱 누르기
+  //_______ = joy->buttons[12];  //조이스틱에서 오른쪽 스틱 누르기
+  
 }
 
 // 해당 각속도의 최대 최소 범위 설정함.
